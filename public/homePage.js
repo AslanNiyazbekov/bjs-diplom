@@ -50,7 +50,7 @@ moneyManager.addMoneyCallback = ((data) => {
             ProfileWidget.showProfile(response.data);
             moneyManager.setMessage(true, "Баланс успешно пополнен");
         } else {
-            console.error(response.error);
+            console.error(false, 'Ошибка пополнения баланса' + response.error);
         }
     });
 });
@@ -62,7 +62,7 @@ moneyManager.conversionMoneyCallback = ((data) => {
             ProfileWidget.showProfile(response.data);
             moneyManager.setMessage(true, "Конвертация завершена успешно");
         } else {
-            console.error(response.error);
+            console.error(false, 'Ошибка конвертации' + response.error);
         }
     });
 });
@@ -74,7 +74,7 @@ moneyManager.sendMoneyCallback = ((data) => {
             ProfileWidget.showProfile(response.data);
             moneyManager.moneyManager(true, "Перевод завершен успешно");
         } else {
-            console.error(response.error);
+            console.error(false, 'Ошибка перевода' + response.error);
         }
     });
 });
